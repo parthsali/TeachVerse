@@ -10,6 +10,7 @@ import Loader from "./Loader";
 import { Avatar } from "./Avatar";
 import * as THREE from "three";
 import Button from "./Button";
+import Blackboard from "./Blackboard";
 
 const CameraManager = () => {
   return (
@@ -50,7 +51,8 @@ const Scene = () => {
         scale={120}
         position={[-120, -140, -340]}
       />
-      <Button  />
+      {/* <Blackboard /> */}
+      <Button />
     </Canvas>
   );
 };

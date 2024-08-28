@@ -26,11 +26,11 @@ export function Avatar(props) {
     return () => actions[animation].fadeOut(0.3);
   }, [animation]);
 
-  useControls("Animations", {
-    animation: button(() => {
-      setAnimation((prev) => (prev === "Idle" ? "Greetings" : "Idle"));
-    }),
-  });
+  // useControls("Animations", {
+  //   animation: button(() => {
+  //     setAnimation((prev) => (prev === "Idle" ? "Greetings" : "Idle"));
+  //   }),
+  // });
 
   return (
     <group {...props} dispose={null} ref={groupRef}>
