@@ -10,6 +10,7 @@ import Loader from "./Loader";
 import { Avatar } from "./Avatar";
 import * as THREE from "three";
 import TableText from "./TableText";
+import Button from "./Button";
 
 const CameraManager = () => {
   return (
@@ -18,8 +19,7 @@ const CameraManager = () => {
       minAzimuthAngle={-Math.PI / 2}
       maxPolarAngle={(2 * Math.PI) / 3}
       minPolarAngle={Math.PI / 3}
-      minZoom={10}
-      maxZoom={100}
+      zoom={false}
       mouseButtons={{
         left: 1,
         wheel: 16,
@@ -52,6 +52,7 @@ const Scene = () => {
       />
       {/* <Blackboard /> */}
       <TableText />
+      <Button />
     </Canvas>
   );
 };
