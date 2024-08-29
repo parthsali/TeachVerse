@@ -17,8 +17,8 @@ const CameraManager = () => {
     <CameraControls
       // maxAzimuthAngle={Math.PI / 2}
       // minAzimuthAngle={-Math.PI / 2}
-      // maxPolarAngle={(2 * Math.PI) / 3}
-      // minPolarAngle={Math.PI / 3}
+      maxPolarAngle={(2 * Math.PI) / 3}
+      minPolarAngle={Math.PI / 3}
       zoom={false}
       mouseButtons={{
         left: 1,
