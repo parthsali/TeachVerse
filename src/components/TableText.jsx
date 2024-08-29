@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "@react-three/drei";
 
-const Button = () => {
+const TableText = () => {
   return (
     <>
       <Text
@@ -29,4 +29,4 @@ const Button = () => {
   );
 };
 
-export default Button;
+export default TableText;

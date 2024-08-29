@@ -9,8 +9,7 @@ import { useControls } from "leva";
 import Loader from "./Loader";
 import { Avatar } from "./Avatar";
 import * as THREE from "three";
-import Button from "./Button";
-import Blackboard from "./Blackboard";
+import TableText from "./TableText";
 
 const CameraManager = () => {
   return (
@@ -52,7 +51,7 @@ const Scene = () => {
         position={[-120, -140, -340]}
       />
       {/* <Blackboard /> */}
-      <Button />
+      <TableText />
     </Canvas>
   );
 };

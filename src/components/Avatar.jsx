@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useAnimations, useFBX, useGLTF } from "@react-three/drei";
-import { button, useControls } from "leva";
+import useStore from "../store";
 
 export function Avatar(props) {
   const { nodes, materials } = useGLTF(
@@ -13,7 +13,8 @@ export function Avatar(props) {
   idelAnimation[0].name = "Idle";
   greetingAnimation[0].name = "Greetings";
 
-  const [animation, setAnimation] = useState("Idle");
+  const animation = useStore((state) => state.animation);
+
   const groupRef = useRef();
   const { actions } = useAnimations(
     [idelAnimation[0], greetingAnimation[0]],
@@ -25,12 +26,6 @@ export function Avatar(props) {
 
     return () => actions[animation].fadeOut(0.3);
   }, [animation]);
-
-  // useControls("Animations", {
-  //   animation: button(() => {
-  //     setAnimation((prev) => (prev === "Idle" ? "Greetings" : "Idle"));
-  //   }),
-  // });
 
   return (
     <group {...props} dispose={null} ref={groupRef}>
