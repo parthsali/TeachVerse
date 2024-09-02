@@ -4,13 +4,10 @@ import {
   Gltf,
   OrbitControls,
 } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import { useControls } from "leva";
-import Loader from "./Loader";
-import { Avatar } from "./Avatar";
 import * as THREE from "three";
 import TableText from "./TableText";
 import Button from "./Button";
+import { Avatar } from "./Avatar";
 
 const CameraManager = () => {
   return (
@@ -31,12 +28,7 @@ const CameraManager = () => {
 
 const Scene = () => {
   return (
-    <Canvas
-      fallback={<Loader />}
-      camera={{
-        position: [0, 0, 1],
-      }}
-    >
+    <>
       <CameraManager />
       <Environment preset="sunset" />
       <ambientLight intensity={0.6} />
@@ -53,7 +45,7 @@ const Scene = () => {
       {/* <Blackboard /> */}
       <TableText />
       <Button />
-    </Canvas>
+    </>
   );
 };
 
